@@ -13,7 +13,7 @@ public:
             reversed = reversed * 10 + x % 10;
             x /= 10;
         }
-        return (reversed > 2e31 || reversed < -2e31) ? 0 : (int)reversed;
+        return (reversed > 2147483647 || reversed < -2147483647) ? 0 : (int)reversed;
     }
 };
 

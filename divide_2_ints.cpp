@@ -14,14 +14,15 @@ and if the quotient is strictly less than -2^31, then return -2^31.
 #include <iostream>
 using namespace std;
 
+#include <iostream>
+#include <climits>
+using namespace std;
+
 class Solution {
 public:
     int divide(int dividend, int divisor){
-        const int INT_MAX = 2147483647;
-        const int INT_MIN = -2147483648;
-
         if (dividend == INT_MIN && divisor == -1) return INT_MAX;
-        if (dividend == INT_MAX && divisor == 1) return INT_MIN;
+        if (dividend == INT_MIN && divisor == 1) return INT_MIN;
 
         bool negative = (dividend < 0) ^ (divisor < 0);
 

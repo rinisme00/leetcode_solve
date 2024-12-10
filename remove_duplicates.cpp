@@ -11,7 +11,7 @@ public:
 
         int i = 1, j = 1;
         while (j < n) {
-            if (nums[i] != nums[j-1]) {
+            if (nums[j] != nums[j-1]) {
                 nums[i] = nums[j];
                 i++;
             }
